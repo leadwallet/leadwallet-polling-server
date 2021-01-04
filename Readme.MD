@@ -1,1 +1,1 @@
-This app serves as a polling server for our Google Cloud instances and is a workaround towards preventing cold starts.
+This app serves as a polling server for our Google Cloud instances and error and analytics service and is a workaround towards preventing cold starts.

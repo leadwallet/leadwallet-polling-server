@@ -13,6 +13,9 @@ const pollApps = () => {
   const multisenderAppResponse = await axios.get(
    "https://leadwallet-multisender-cliwa3gezq-uc.a.run.app/api"
   );
+  const mailServiceAppResponse = await axios.get(
+   "https://leadwallet-errors-and-analytics-a901e9.us1.kinto.io/ping"
+  );
   console.log(
    "Core App Response: ",
    JSON.stringify(coreAppResponse.data, null, 2)
@@ -20,6 +23,10 @@ const pollApps = () => {
   console.log(
    "Multisender App Response: ",
    JSON.stringify(multisenderAppResponse.data, null, 2)
+  );
+  console.log(
+   "Mail Service App Response",
+   JSON.stringify(mailServiceAppResponse.data, null, 2)
   );
  }, 60 * 2 * 1000);
 };
