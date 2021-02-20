@@ -16,6 +16,9 @@ const pollApps = () => {
   const mailServiceAppResponse = await axios.get(
    "https://leadwallet-errors-and-analytics-a901e9.us1.kinto.io/ping"
   );
+  const nemServerResponse = await axios.get(
+   "https://leadwallet-nem-server-cliwa3gezq-uc.a.run.app/ping"
+  );
   console.log(
    "Core App Response: ",
    JSON.stringify(coreAppResponse.data, null, 2)
@@ -27,6 +30,10 @@ const pollApps = () => {
   console.log(
    "Mail Service App Response",
    JSON.stringify(mailServiceAppResponse.data, null, 2)
+  );
+  console.log(
+   "Nem Server Response",
+   JSON.stringify(nemServerResponse.data, null, 2)
   );
  }, 60 * 2 * 1000);
 };
